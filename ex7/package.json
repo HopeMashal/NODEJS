@@ -1,0 +1,16 @@
+{
+  "name": "ex7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ex7.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chalk": "^2.4.1",
+    "request": "^2.88.0"
+  }
+}
