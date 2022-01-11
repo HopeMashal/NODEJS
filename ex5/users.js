@@ -1,5 +1,6 @@
 const uniqid = require("uniqid");
 const fs = require("fs");
+const chalk = require("chalk")
 
 const createUser = (name, email) => {
     const users = loadUsers();
@@ -8,7 +9,7 @@ const createUser = (name, email) => {
         name: name,
         email: email,
     });
-    console.log("New user created!");
+    console.log(chalk.green.bold("New user created!"));
     saveUsers(users);
 };
 
@@ -16,11 +17,11 @@ const readUser = (id) => {
     const users = loadUsers();
     const user = users.find((user) => user.id === id);
     if (user) {
-        console.log("ID: ", user.id);
-        console.log("Name: ", user.name);
-        console.log("Email: ", user.email);
+        console.log(chalk.inverse.bold("ID: "), user.id);
+        console.log(chalk.inverse.bold("Name: "), user.name);
+        console.log(chalk.inverse.bold("Email: "), user.email);
     } else {
-        console.log("User not found");
+        console.log(chalk.red.bold("User not found"));
     }
 };
 
@@ -34,8 +35,9 @@ const updateUser = (id, name, email) => {
             email: email,
         });
         saveUsers(filteredUsers);
+        console.log(chalk.green.bold("User updated!"));
     } else {
-        console.log("User not found");
+        console.log(chalk.red.bold("User not found"));
     }
 };
 
@@ -43,10 +45,10 @@ const deleteUser = (id) => {
     const users = loadUsers();
     const usersToKeep = users.filter((user) => user.id !== id);
     if (users.length > usersToKeep.length) {
-        console.log("User removed!");
+        console.log(chalk.red.bold("User removed!"));
         saveUsers(usersToKeep);
     } else {
-        console.log("User not found");
+        console.log(chalk.red.bold("User not found"));
     }
 };
 
