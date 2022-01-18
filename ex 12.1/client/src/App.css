@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding:0;
+}
+.header-div{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(197, 197, 197);
+  padding: 10px;
+}
+.header-ul li{
+  display: block;
+  margin-left: 20px;
+  float:left;
+  list-style: none;
+  font-size: 20px;
+}
+.header-ul li a{
+  color:black;
+  text-decoration: none;
+}
+.header-ul li a:hover{
+  font-weight: 1000;
+  background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom: 2px solid white;
+}
+.help-page,.weather-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.help-page h1, .notfound-page h1, .weather-page h1{
+  margin: 30px;
+}
+.notfound-page{
+  text-align: center;
+}
+.btn{
+  padding: 10px;
+  background-color: rgb(172, 172, 172);
+  border-radius: 10px;
+  margin-left: 10px;
+  color: white;
+}
+.input{
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+h1{
+  background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
