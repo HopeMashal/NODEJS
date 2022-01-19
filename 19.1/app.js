@@ -5,7 +5,7 @@ const validator = require("validator");
 const app = express();
 app.use(express.json());
 
-mongoose.connect("mongodb+srv://Hope:hope1611@cluster0.uyefr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://<name>:<password>@cluster0.uyefr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useCreateIndex: true
 });
